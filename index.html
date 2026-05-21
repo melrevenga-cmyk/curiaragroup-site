@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curiara Group — Your Guide Into Venezuela & LatAm</title>
+<meta name="description" content="Bilingual market entry, regulatory, and go-to-market advisory for companies and investors entering Venezuela and Latin America. Strategy. Compliance. Education.">
+<meta name="author" content="Curiara Group">
+<link rel="canonical" href="https://curiaragroup.com/">
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="Curiara Group — Your Guide Into Venezuela & LatAm">
+<meta property="og:description" content="Bilingual market entry, regulatory, and go-to-market advisory for companies and investors entering Venezuela. The window is open.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://curiaragroup.com/">
+<meta property="og:site_name" content="Curiara Group">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_VE">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Curiara Group — Your Guide Into Venezuela & LatAm">
+<meta name="twitter:description" content="Bilingual market entry, regulatory, and go-to-market advisory for companies and investors entering Venezuela.">
+
+<!-- Favicon (inline SVG, no extra request) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230B1626'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='62' font-weight='700' text-anchor='middle' fill='%23C9A84C'%3EC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Curiara Group",
+  "url": "https://curiaragroup.com",
+  "email": "curiaragroup@gmail.com",
+  "description": "Bilingual market entry, regulatory, and go-to-market advisory for companies and investors entering Venezuela and Latin America.",
+  "areaServed": ["Venezuela", "Latin America", "United States"],
+  "knowsLanguage": ["en", "es"],
+  "foundingDate": "2026"
+}
+</script>
+
+<style>
+  :root {
+    --navy: #0B1626;
+    --navy-mid: #152238;
+    --navy-light: #1E3356;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dim: rgba(201,168,76,0.15);
+    --cream: #F2EDE4;
+    --muted: #7A8FA6;
+    --border: rgba(201,168,76,0.2);
+    --white: #FFFFFF;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--cream);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--gold); color: var(--navy); }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 5vw;
+    background: rgba(11,22,38,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex; gap: 2.5rem; list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    color: var(--muted); text-decoration: none;
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em;
+    text-transform: uppercase; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-cta {
+    background: var(--gold) !important; color: var(--navy) !important;
+    padding: 0.55rem 1.4rem; border-radius: 2px;
+    font-weight: 600 !important; letter-spacing: 0.04em !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    padding: 8rem 5vw 4rem;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 60% 40%, rgba(30,51,86,0.6) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.05) 0%, transparent 60%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      linear-gradient(var(--gold) 1px, transparent 1px),
+      linear-gradient(90deg, var(--gold) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content {
+    position: relative; z-index: 1;
+    max-width: 900px;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    margin-bottom: 2rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem; letter-spacing: 0.12em;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 36px; height: 1px;
+    background: var(--gold);
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--cream);
+    margin-bottom: 1.75rem;
+    letter-spacing: -0.01em;
+  }
+  h1 em {
+    font-style: italic; color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.1rem; font-weight: 300;
+    color: var(--muted); max-width: 560px;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    padding: 1rem 2.2rem; border-radius: 2px;
+    font-weight: 600; font-size: 0.9rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; transition: all 0.2s;
+    border: 1.5px solid var(--gold);
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); border-color: var(--gold-light); }
+  .btn-ghost {
+    background: transparent; color: var(--cream);
+    padding: 1rem 2.2rem; border-radius: 2px;
+    font-weight: 500; font-size: 0.9rem;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; transition: all 0.2s;
+    border: 1.5px solid rgba(242,237,228,0.25);
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: var(--cream); }
+  .hero-stat-row {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 0.5px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .hero-stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 600;
+    color: var(--gold); display: block; line-height: 1;
+    margin-bottom: 0.35rem;
+  }
+  .hero-stat .label {
+    font-size: 0.78rem; color: var(--muted);
+    letter-spacing: 0.05em; text-transform: uppercase;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 5vw; }
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.14em;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 28px; height: 1px; background: var(--gold);
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 300; line-height: 1.15;
+    color: var(--cream); margin-bottom: 1.5rem;
+  }
+  h2 em { font-style: italic; color: var(--gold); }
+
+  /* ── WHAT WE DO ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5px;
+    margin-top: 4rem;
+    border: 1.5px solid var(--border);
+    border-radius: 4px; overflow: hidden;
+  }
+  .service-card {
+    padding: 2.5rem;
+    background: var(--navy-mid);
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .service-card:hover { background: var(--navy-light); }
+  .service-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--gold);
+    letter-spacing: 0.1em; margin-bottom: 1.5rem;
+    display: block;
+  }
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.65rem; font-weight: 600;
+    color: var(--cream); margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .service-card p {
+    font-size: 0.9rem; color: var(--muted);
+    line-height: 1.8; margin-bottom: 1.5rem;
+  }
+  .service-tags {
+    display: flex; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .tag {
+    font-size: 0.72rem; letter-spacing: 0.05em;
+    color: var(--gold); border: 0.5px solid var(--border);
+    padding: 0.3rem 0.75rem; border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  /* ── MARKET MOMENT ── */
+  .moment-section {
+    background: var(--navy-mid);
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .moment-inner {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 5rem; align-items: start;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .timeline { margin-top: 2.5rem; }
+  .timeline-item {
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 1.25rem; margin-bottom: 1.75rem;
+    position: relative;
+  }
+  .timeline-item::before {
+    content: ''; position: absolute;
+    left: 36px; top: 24px; bottom: -20px;
+    width: 1px; background: var(--border);
+  }
+  .timeline-item:last-child::before { display: none; }
+  .t-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; color: var(--gold);
+    letter-spacing: 0.08em; padding-top: 0.1rem;
+    text-align: right;
+  }
+  .t-text {
+    font-size: 0.88rem; color: var(--muted);
+    line-height: 1.65;
+  }
+  .t-text strong { color: var(--cream); font-weight: 500; }
+  .blockquote-box {
+    border-left: 2px solid var(--gold);
+    padding: 1.5rem 0 1.5rem 2rem;
+    margin: 2rem 0;
+  }
+  .blockquote-box p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-style: italic;
+    color: var(--cream); line-height: 1.5;
+    font-weight: 300;
+  }
+  .blockquote-box cite {
+    font-size: 0.78rem; color: var(--muted);
+    letter-spacing: 0.06em; text-transform: uppercase;
+    font-style: normal; display: block; margin-top: 0.75rem;
+  }
+
+  /* ── CONTENT / SOCIAL ── */
+  .content-section { max-width: 1100px; margin: 0 auto; }
+  .platform-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; margin: 3rem 0;
+  }
+  .platform-card {
+    background: var(--navy-mid);
+    border: 0.5px solid var(--border);
+    border-radius: 4px; padding: 2rem;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .platform-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .platform-icon {
+    font-size: 2rem; margin-bottom: 1rem; display: block;
+  }
+  .platform-card h4 {
+    font-size: 1rem; font-weight: 600;
+    color: var(--cream); margin-bottom: 0.5rem;
+    letter-spacing: 0.03em;
+  }
+  .platform-card p {
+    font-size: 0.82rem; color: var(--muted); line-height: 1.6;
+  }
+  .content-pillars {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem; margin-top: 2.5rem;
+  }
+  .pillar {
+    display: flex; gap: 1.25rem;
+    background: var(--navy-mid); border: 0.5px solid var(--border);
+    border-radius: 4px; padding: 1.5rem;
+  }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1;
+    color: var(--gold-dim); min-width: 40px;
+  }
+  .pillar h4 {
+    font-size: 0.92rem; font-weight: 600;
+    color: var(--cream); margin-bottom: 0.35rem;
+    letter-spacing: 0.02em;
+  }
+  .pillar p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+
+  /* ── LEAD MAGNET ── */
+  .lead-section {
+    background: linear-gradient(135deg, var(--navy-mid) 0%, rgba(30,51,86,0.4) 100%);
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+    text-align: center;
+  }
+  .lead-inner { max-width: 600px; margin: 0 auto; }
+  .lead-section h2 { margin-bottom: 1rem; }
+  .lead-section > .lead-inner > p { color: var(--muted); margin-bottom: 2.5rem; }
+  .email-form {
+    display: flex; gap: 0.75rem; max-width: 480px; margin: 0 auto;
+    flex-wrap: wrap; justify-content: center;
+  }
+  .email-form input {
+    flex: 1; min-width: 220px;
+    padding: 0.9rem 1.25rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--cream); font-size: 0.9rem;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .email-form input:focus { border-color: var(--gold); }
+  .email-form input::placeholder { color: var(--muted); }
+  .email-form button {
+    background: var(--gold); color: var(--navy);
+    border: none; padding: 0.9rem 2rem;
+    border-radius: 2px; font-weight: 600;
+    font-size: 0.88rem; letter-spacing: 0.06em;
+    text-transform: uppercase; cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background 0.2s; white-space: nowrap;
+  }
+  .email-form button:hover { background: var(--gold-light); }
+  .lead-disclaimer {
+    font-size: 0.75rem; color: var(--muted);
+    margin-top: 1rem; opacity: 0.7;
+  }
+  .form-success {
+    display: none;
+    margin-top: 1.5rem;
+    color: var(--gold);
+    font-size: 0.9rem;
+  }
+  .form-success.visible { display: block; }
+
+  /* ── ABOUT ── */
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 5rem; align-items: center;
+    max-width: 1100px; margin: 0 auto;
+  }
+  .about-visual {
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    background: var(--navy-mid);
+    border-radius: 4px;
+  }
+  .about-visual .big-word {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem; font-weight: 700;
+    color: var(--gold); line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block; margin-bottom: 0.5rem;
+  }
+  .about-visual .small-word {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; color: var(--muted);
+    letter-spacing: 0.2em; text-transform: uppercase;
+  }
+  .divider-line {
+    width: 100%; height: 1px;
+    background: var(--border);
+    margin: 1.5rem 0;
+  }
+  .credential {
+    display: flex; gap: 1rem; align-items: flex-start;
+    margin-bottom: 1.25rem;
+  }
+  .cred-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--gold); margin-top: 8px; flex-shrink: 0;
+  }
+  .cred-text { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+  .cred-text strong { color: var(--cream); font-weight: 500; }
+
+  /* ── CONTACT ── */
+  .contact-section {
+    text-align: center;
+    background: var(--navy-mid);
+    border-top: 0.5px solid var(--border);
+  }
+  .contact-inner { max-width: 640px; margin: 0 auto; }
+  .contact-email {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    margin: 1.5rem 0 1rem;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .contact-email:hover { border-color: var(--gold); }
+  .contact-sub {
+    font-size: 0.9rem; color: var(--muted); line-height: 1.8;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 3rem 5vw 2rem;
+    border-top: 0.5px solid var(--border);
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600;
+    color: var(--gold); letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .footer-tagline {
+    font-size: 0.78rem; color: var(--muted);
+    letter-spacing: 0.04em; margin-top: 0.35rem;
+  }
+  .footer-links {
+    display: flex; gap: 2rem; list-style: none;
+    flex-wrap: wrap;
+  }
+  .footer-links a {
+    font-size: 0.8rem; color: var(--muted);
+    text-decoration: none; transition: color 0.2s;
+    letter-spacing: 0.04em;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 100%;
+    padding: 1.5rem 5vw 2rem;
+    border-top: 0.5px solid var(--border);
+    text-align: center;
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+  .footer-bottom a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .footer-bottom a:hover { text-decoration: underline; }
+
+  /* ── FADE IN ANIMATION ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * { animation: fadeUp 0.7s ease-out both; }
+  .hero-eyebrow  { animation-delay: 0.1s; }
+  h1             { animation-delay: 0.25s; }
+  .hero-sub      { animation-delay: 0.4s; }
+  .hero-actions  { animation-delay: 0.55s; }
+  .hero-stat-row { animation-delay: 0.7s; }
+
+  @media (max-width: 768px) {
+    .moment-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-grid   { grid-template-columns: 1fr; gap: 2.5rem; }
+    .nav-links li:not(:last-child) { display: none; }
+    .hero-stat-row { gap: 2rem; }
+    footer { flex-direction: column; text-align: center; align-items: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home" class="nav-logo">Curiara Group</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#content">Learn</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#newsletter" class="nav-cta">Get Intel →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Venezuela &amp; LatAm Market Advisory · Est. 2026</div>
+    <h1>Your guide into<br><em>Venezuela</em></h1>
+    <p class="hero-sub">
+      Venezuela is open. The regulatory window is here, the investment signals are real, and the companies moving now will define the next decade. We help you move with clarity — bilingual strategy, legal structure, and market intelligence in one place.
+    </p>
+    <div class="hero-actions">
+      <a href="#newsletter" class="btn-primary">Get Weekly Intel</a>
+      <a href="#services" class="btn-ghost">Our Services</a>
+    </div>
+    <div class="hero-stat-row">
+      <div class="hero-stat">
+        <span class="num">$500B</span>
+        <span class="label">Projected opportunity in Venezuela</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">5.5M</span>
+        <span class="label">Venezuelan diaspora globally</span>
+      </div>
+      <div class="hero-stat">
+        <span class="num">192%</span>
+        <span class="label">Growth in US oil exports 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-label">What we do</div>
+  <h2>Three ways we<br>move you <em>forward</em></h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01 — Strategy</span>
+      <h3>Market Entry &amp; Go-to-Market</h3>
+      <p>Bilingual strategy for companies entering Venezuela and broader Latin American markets. From market intelligence to distribution, digital infrastructure, and your first 90 days on the ground.</p>
+      <div class="service-tags">
+        <span class="tag">GTM Strategy</span>
+        <span class="tag">Market Intel</span>
+        <span class="tag">Email Infrastructure</span>
+        <span class="tag">Digital Marketing</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02 — Legal</span>
+      <h3>Regulatory &amp; Compliance</h3>
+      <p>Navigate OFAC licensing, Venezuela's new Hydrocarbons Law, and cross-border compliance — for mid-market companies that need expert guidance without Big Law price tags.</p>
+      <div class="service-tags">
+        <span class="tag">OFAC Compliance</span>
+        <span class="tag">Entity Structuring</span>
+        <span class="tag">Investment Risk</span>
+        <span class="tag">Cross-Border</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03 — Education</span>
+      <h3>Courses &amp; Community</h3>
+      <p>Practical, bilingual education for professionals navigating the Latin American market. From Venezuela entry playbooks to AI tools for consultants and OFAC fundamentals.</p>
+      <div class="service-tags">
+        <span class="tag">Online Courses</span>
+        <span class="tag">Live Cohorts</span>
+        <span class="tag">Community</span>
+        <span class="tag">Newsletter</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKET MOMENT -->
+<section class="moment-section" id="why-now">
+  <div class="moment-inner">
+    <div>
+      <div class="section-label">Why now</div>
+      <h2>The window<br>is <em>open</em></h2>
+      <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.85; margin-bottom: 1.5rem;">
+        Venezuela is experiencing its most significant economic inflection point in decades. The companies that move now — with the right guidance — will capture advantages that simply won't exist in 18 months.
+      </p>
+      <div class="blockquote-box">
+        <p>"The more relevant analogy is Eastern Germany in the '90s, as those economies transitioned from communist to capitalist."</p>
+        <cite>— Signum Global Advisors, January 2026</cite>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="t-date">Jan 3<br>2026</span>
+        <div class="t-text"><strong>Maduro removed.</strong> U.S. special forces capture and extradite the Venezuelan president. Political transition begins under Delcy Rodríguez.</div>
+      </div>
+      <div class="timeline-item">
+        <span class="t-date">Jan 29<br>2026</span>
+        <div class="t-text"><strong>OFAC GL-46 issued.</strong> U.S. Treasury authorizes Venezuelan oil exports. New Hydrocarbons Law approved — first reform since 1943.</div>
+      </div>
+      <div class="timeline-item">
+        <span class="t-date">Feb 13<br>2026</span>
+        <div class="t-text"><strong>OFAC GL-49 issued.</strong> New investments and joint ventures explicitly permitted. The legal architecture for market entry is in place.</div>
+      </div>
+      <div class="timeline-item">
+        <span class="t-date">Apr 30<br>2026</span>
+        <div class="t-text"><strong>Direct flights resume.</strong> U.S.–Venezuela flights operational for the first time since 2019. Investor delegations begin arriving in Caracas.</div>
+      </div>
+      <div class="timeline-item">
+        <span class="t-date">Now</span>
+        <div class="t-text"><strong>First-mover window.</strong> Oil exports up 192%. Construction sector growing. Consumer market reactivating. The opportunity is real — and competitive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT / SOCIAL -->
+<section id="content">
+  <div class="content-section">
+    <div class="section-label">Learn with us</div>
+    <h2>Education first.<br><em>Always.</em></h2>
+    <p style="color: var(--muted); max-width: 560px; font-size: 0.95rem; line-height: 1.85;">
+      We make complex markets accessible. Follow us for daily intelligence on Venezuela, LatAm market strategy, OFAC compliance, and AI tools for business professionals.
+    </p>
+    <div class="platform-grid">
+      <div class="platform-card">
+        <span class="platform-icon">📸</span>
+        <h4>Instagram</h4>
+        <p>Market intelligence carousels, regulatory explainers, and business insights. Visual, bilingual, actionable.</p>
+      </div>
+      <div class="platform-card">
+        <span class="platform-icon">🎵</span>
+        <h4>TikTok</h4>
+        <p>60–90 second takes on LatAm business, Venezuela's opening, and practical consulting tips you can use today.</p>
+      </div>
+      <div class="platform-card">
+        <span class="platform-icon">📧</span>
+        <h4>Newsletter</h4>
+        <p>Weekly Venezuela Business Intelligence. Regulatory updates, market moves, and what it means for your business.</p>
+      </div>
+      <div class="platform-card">
+        <span class="platform-icon">🎓</span>
+        <h4>Courses</h4>
+        <p>Structured learning on market entry, OFAC compliance, GTM strategy, and AI tools for LatAm professionals.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 3.5rem;">
+      <p style="font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; font-family: 'DM Mono', monospace; margin-bottom: 1.5rem;">Content pillars</p>
+      <div class="content-pillars">
+        <div class="pillar">
+          <div class="pillar-num">1</div>
+          <div>
+            <h4>Venezuela Market Updates</h4>
+            <p>Weekly breakdowns of regulatory changes, investment signals, and what's actually happening on the ground.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">2</div>
+          <div>
+            <h4>OFAC &amp; Compliance Explainers</h4>
+            <p>Making sanctions law accessible. What GL-46 and GL-49 actually mean for your company, in plain English.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">3</div>
+          <div>
+            <h4>GTM &amp; Business Strategy</h4>
+            <p>Frameworks for entering Latin American markets, pricing in dollarized economies, and finding the right local partner.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">4</div>
+          <div>
+            <h4>AI Tools for Consultants</h4>
+            <p>How to use AI to do market research, regulatory monitoring, and client deliverables 10× faster.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">5</div>
+          <div>
+            <h4>Diaspora Investing</h4>
+            <p>For the 5.5 million Venezuelans abroad who want to understand the legal and practical path to reinvesting at home.</p>
+          </div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">6</div>
+          <div>
+            <h4>Business Spanish / English</h4>
+            <p>Bilingual business vocabulary, negotiation phrases, and communication strategies for cross-cultural deals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER / LEAD MAGNET -->
+<section class="lead-section" id="newsletter">
+  <div class="lead-inner">
+    <div class="section-label" style="justify-content: center;">Free weekly intelligence</div>
+    <h2>The <em>Venezuela Brief</em></h2>
+    <p>Every week: what changed in Venezuela's regulatory environment, which companies are moving, and what it means for your market entry strategy. Free. Bilingual. No fluff.</p>
+    <form class="email-form" id="leadForm" onsubmit="return handleLead(event)">
+      <input type="email" id="leadEmail" placeholder="your@email.com" required aria-label="Your email" />
+      <button type="submit">Subscribe Free</button>
+    </form>
+    <p class="lead-disclaimer">No spam. Unsubscribe anytime. ~500 words every Tuesday.</p>
+    <p class="form-success" id="leadSuccess">✓ Thanks — opening your email client to confirm your subscription.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <span class="big-word">Curiara</span>
+      <span class="small-word">Yekwana · /ku.ˈɾja.ɾa/ · n. dugout canoe</span>
+      <div class="divider-line"></div>
+      <div class="credential">
+        <div class="cred-dot"></div>
+        <div class="cred-text"><strong>Bilingual navigation</strong> — Native-level English and Spanish. We don't translate; we guide you through.</div>
+      </div>
+      <div class="credential">
+        <div class="cred-dot"></div>
+        <div class="cred-text"><strong>Integrated offering</strong> — Commercial GTM strategy and regulatory/legal advisory under one roof.</div>
+      </div>
+      <div class="credential">
+        <div class="cred-dot"></div>
+        <div class="cred-text"><strong>Mid-market focus</strong> — Built for the companies that Big Law and McKinsey ignore.</div>
+      </div>
+      <div class="credential">
+        <div class="cred-dot"></div>
+        <div class="cred-text"><strong>Venezuela specialists</strong> — Deep expertise in a market most advisors are still figuring out.</div>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">About</div>
+      <h2>Built for the<br><em>moment</em> we're in</h2>
+      <p style="color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin-bottom: 1.5rem;">
+        Curiara Group is a bilingual market advisory built for companies entering Venezuela and Latin America. The name comes from the dugout canoes used to navigate the Orinoco's most complex tributaries — boats carved from a single trunk, guided by people who know every current. That's what we do for the companies we serve.
+      </p>
+      <p style="color: var(--muted); line-height: 1.85; font-size: 0.95rem; margin-bottom: 2.5rem;">
+        We believe the best way to build a consulting firm in 2026 is to educate first — to be the most useful voice in the room before we ever ask for a retainer. That's why we invest heavily in free content, practical courses, and a community where intelligence flows freely.
+      </p>
+      <a href="#newsletter" class="btn-primary">Start with our newsletter →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="section-label" style="justify-content: center;">Get in touch</div>
+    <h2>Let's <em>talk</em></h2>
+    <a href="mailto:curiaragroup@gmail.com?subject=Curiara%20Group%20%E2%80%94%20Inquiry" class="contact-email">curiaragroup@gmail.com</a>
+    <p class="contact-sub">
+      Market entry questions, OFAC scenarios, diaspora investment, or just a conversation about Venezuela's next decade — we read every message and respond personally within two business days.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-logo">Curiara Group</div>
+    <div class="footer-tagline">Venezuela &amp; LatAm Market Advisory · Bilingual · Integrated · Est. 2026</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#content">Content</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://www.instagram.com/curiaragroup" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://www.tiktok.com/@curiaragroup" target="_blank" rel="noopener">TikTok</a></li>
+  </ul>
+</footer>
+<div class="footer-bottom">
+  © 2026 Curiara Group. All rights reserved. · Email infrastructure powered by <a href="https://inboxglobal.io" target="_blank" rel="noopener">InboxGlobal</a>.
+</div>
+
+<script>
+  function handleLead(e) {
+    e.preventDefault();
+    var emailInput = document.getElementById('leadEmail');
+    var email = emailInput.value.trim();
+    if (!email) return false;
+
+    // Open user's email client to send a subscribe request to curiaragroup@gmail.com.
+    // Replace this with a real form endpoint (ConvertKit, Beehiiv, Mailchimp, etc.) when ready.
+    var subject = encodeURIComponent('Subscribe me to The Venezuela Brief');
+    var body = encodeURIComponent(
+      'Please add this email to The Venezuela Brief:\n\n' + email + '\n\nGracias.'
+    );
+    window.location.href = 'mailto:curiaragroup@gmail.com?subject=' + subject + '&body=' + body;
+
+    document.getElementById('leadSuccess').classList.add('visible');
+    emailInput.value = '';
+    return false;
+  }
+</script>
+
+</body>
+</html>
