@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposal — ODH Grupo Consultor · Digital Presence Engagement · Curiara Group</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1626;
+    --navy-mid: #152238;
+    --navy-light: #1E3356;
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dim: rgba(201,168,76,0.15);
+    --cream: #F2EDE4;
+    --muted: #7A8FA6;
+    --border: rgba(201,168,76,0.2);
+    --strikethrough: #5A6B82;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--cream);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── LAYOUT ── */
+  .doc {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 4rem 5vw 6rem;
+  }
+
+  /* ── HEADER ── */
+  .doc-header {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding-bottom: 2rem;
+    border-bottom: 0.5px solid var(--border);
+    margin-bottom: 3.5rem;
+    flex-wrap: wrap; gap: 1.5rem;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--gold); letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .brand-sub {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    margin-top: 0.4rem;
+  }
+  .meta {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; color: var(--muted);
+    letter-spacing: 0.05em; line-height: 1.9;
+  }
+  .meta span { color: var(--cream); }
+
+  /* ── EYEBROW ── */
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.75rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.14em;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .eyebrow::before {
+    content: ''; display: block;
+    width: 28px; height: 1px; background: var(--gold);
+  }
+
+  /* ── TYPE ── */
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--cream); letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+  }
+  h1 em { font-style: italic; color: var(--gold); }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.7rem, 3.2vw, 2.2rem);
+    font-weight: 300; line-height: 1.2;
+    color: var(--cream); margin-bottom: 1.25rem;
+  }
+  h2 em { font-style: italic; color: var(--gold); }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem; font-weight: 600;
+    color: var(--cream); margin-bottom: 0.5rem;
+  }
+  p { color: var(--muted); font-size: 0.95rem; line-height: 1.85; }
+  p.lead {
+    font-size: 1.05rem; color: var(--cream);
+    font-weight: 300; line-height: 1.7;
+  }
+  strong { color: var(--cream); font-weight: 500; }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 4rem; }
+  .section-divider {
+    width: 100%; height: 1px;
+    background: var(--border);
+    margin: 0 0 3rem;
+  }
+
+  /* ── SCOPE LIST ── */
+  .scope-grid {
+    display: grid; gap: 0;
+    margin-top: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .scope-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 2rem;
+    background: var(--navy-mid);
+    border-bottom: 1px solid var(--border);
+  }
+  .scope-item:last-child { border-bottom: none; }
+  .scope-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--gold);
+    letter-spacing: 0.08em;
+    padding-top: 0.35rem;
+  }
+  .scope-body h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .scope-body p { font-size: 0.88rem; line-height: 1.75; }
+  .scope-body ul {
+    list-style: none; margin-top: 0.85rem;
+  }
+  .scope-body li {
+    font-size: 0.85rem; color: var(--muted);
+    padding-left: 1.2rem; position: relative;
+    margin-bottom: 0.4rem; line-height: 1.7;
+  }
+  .scope-body li::before {
+    content: '—'; position: absolute;
+    left: 0; color: var(--gold);
+  }
+
+  /* ── INVESTMENT BOX ── */
+  .invest-box {
+    background: var(--navy-mid);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2.5rem;
+    margin-top: 2rem;
+  }
+  .invest-row {
+    display: flex; justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 0.5px solid var(--border);
+    flex-wrap: wrap; gap: 0.5rem;
+  }
+  .invest-row:last-of-type { border-bottom: none; }
+  .invest-label { font-size: 0.92rem; color: var(--cream); }
+  .invest-label small {
+    display: block; font-size: 0.78rem;
+    color: var(--muted); margin-top: 0.2rem;
+  }
+  .invest-amt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; color: var(--cream);
+    font-weight: 600;
+  }
+  .invest-amt .strike {
+    text-decoration: line-through;
+    color: var(--strikethrough);
+    font-size: 1.1rem; font-weight: 400;
+    margin-right: 0.6rem;
+  }
+  .invest-amt .friend {
+    color: var(--gold);
+  }
+  .invest-total {
+    margin-top: 1.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--gold);
+    display: flex; justify-content: space-between;
+    align-items: baseline; flex-wrap: wrap; gap: 0.5rem;
+  }
+  .invest-total .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem; color: var(--gold);
+    letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .invest-total .total-amt {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; color: var(--gold);
+    font-weight: 600; line-height: 1;
+  }
+  .invest-total .total-amt small {
+    font-size: 0.85rem; color: var(--muted);
+    font-family: 'DM Sans', sans-serif;
+    margin-left: 0.5rem; font-weight: 400;
+  }
+
+  .note-friend {
+    margin-top: 1.25rem;
+    padding: 1rem 1.25rem;
+    background: rgba(201,168,76,0.06);
+    border-left: 2px solid var(--gold);
+    font-size: 0.85rem; color: var(--cream);
+    line-height: 1.65;
+  }
+  .note-friend strong { color: var(--gold); font-weight: 600; }
+
+  /* ── OPTIONAL ADD-ONS ── */
+  .addon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .addon {
+    background: var(--navy-mid);
+    border: 0.5px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem;
+  }
+  .addon-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem; color: var(--gold);
+    letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 0.75rem; display: block;
+  }
+  .addon h3 { font-size: 1.2rem; margin-bottom: 0.6rem; }
+  .addon p {
+    font-size: 0.85rem; line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .addon-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; color: var(--gold);
+    font-weight: 600;
+  }
+  .addon-price .strike {
+    text-decoration: line-through;
+    color: var(--strikethrough);
+    font-size: 1rem; font-weight: 400;
+    margin-right: 0.5rem;
+  }
+  .addon-price small {
+    color: var(--muted); font-size: 0.78rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400; margin-left: 0.3rem;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline-grid {
+    margin-top: 2rem;
+  }
+  .timeline-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .timeline-row:last-child { border-bottom: none; }
+  .t-week {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem; color: var(--gold);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding-top: 0.2rem;
+  }
+  .t-content h4 {
+    font-size: 0.98rem; color: var(--cream);
+    font-weight: 500; margin-bottom: 0.35rem;
+  }
+  .t-content p {
+    font-size: 0.85rem; line-height: 1.7;
+    color: var(--muted);
+  }
+
+  /* ── TERMS ── */
+  .terms {
+    background: var(--navy-mid);
+    border: 0.5px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+  }
+  .terms-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 1.5rem;
+    padding: 0.9rem 0;
+    border-bottom: 0.5px solid var(--border);
+    align-items: baseline;
+  }
+  .terms-row:last-child { border-bottom: none; }
+  .terms-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--gold);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .terms-value {
+    font-size: 0.9rem; color: var(--cream);
+    line-height: 1.65;
+  }
+  .terms-value small {
+    display: block; color: var(--muted);
+    font-size: 0.8rem; margin-top: 0.2rem;
+  }
+
+  /* ── CLOSING ── */
+  .closing {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 0.5px solid var(--border);
+  }
+  .closing-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem; font-style: italic;
+    color: var(--cream); line-height: 1.5;
+    font-weight: 300;
+    border-left: 2px solid var(--gold);
+    padding: 0.5rem 0 0.5rem 1.75rem;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .sign-block {
+    display: flex; justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap; gap: 2rem;
+    margin-top: 3rem;
+  }
+  .sign-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; color: var(--gold);
+    font-weight: 600;
+  }
+  .sign-title {
+    font-size: 0.82rem; color: var(--muted);
+    letter-spacing: 0.04em;
+    margin-top: 0.3rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 0.5px solid var(--border);
+    display: flex; justify-content: space-between;
+    align-items: center; flex-wrap: wrap; gap: 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem; color: var(--muted);
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  footer span { color: var(--gold); }
+
+  @media (max-width: 640px) {
+    .scope-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem; }
+    .timeline-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .terms-row { grid-template-columns: 1fr; gap: 0.3rem; }
+    .invest-amt { font-size: 1.2rem; }
+  }
+  @media print {
+    body { background: white; color: #222; }
+    .doc { padding: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <!-- HEADER -->
+  <header class="doc-header">
+    <div>
+      <div class="brand">Curiara Group</div>
+      <div class="brand-sub">Venezuela Market Advisory</div>
+    </div>
+    <div class="meta">
+      <div>PROPOSAL · <span>ODH-2026-01</span></div>
+      <div>PREPARED FOR · <span>ODH Grupo Consultor</span></div>
+      <div>DATE · <span>May 2026</span></div>
+      <div>VALID FOR · <span>30 days</span></div>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section>
+    <div class="eyebrow">Engagement proposal</div>
+    <h1>Digital presence<br>built for the <em>next decade</em></h1>
+    <p class="lead" style="margin-top: 1.5rem; max-width: 640px;">
+      ODH has spent years building a reputation as one of Venezuela's most respected voices in economic, political, and social analysis — with a client roster that speaks for itself. What's missing is a digital surface that matches the work. This proposal outlines a four-week engagement to build exactly that.
+    </p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- WHY NOW -->
+  <section>
+    <div class="eyebrow">Context</div>
+    <h2>Why this matters <em>now</em></h2>
+    <p style="max-width: 680px; margin-bottom: 1rem;">
+      Venezuela's reopening has triggered a wave of inbound interest from foreign investors, multilateral institutions, and corporates evaluating market entry. They will all do the same thing first: search for trusted local analysts.
+    </p>
+    <p style="max-width: 680px;">
+      Right now, a Google search for ODH returns fragments. A search for "Venezuela political risk consultancy" returns competitors. The firm's expertise exists; its digital footprint doesn't. The goal of this engagement is to close that gap quickly, professionally, and without distracting ODH's team from client work.
+    </p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SCOPE -->
+  <section>
+    <div class="eyebrow">Scope of work</div>
+    <h2>The <em>Essential</em> package</h2>
+    <p style="max-width: 680px;">
+      A complete bilingual digital foundation: website, search visibility, and LinkedIn presence — designed and delivered together so they reinforce each other.
+    </p>
+
+    <div class="scope-grid">
+
+      <div class="scope-item">
+        <div class="scope-num">01</div>
+        <div class="scope-body">
+          <h3>Bilingual website — 5 pages</h3>
+          <p>A custom-designed site that positions ODH at the level of its actual client roster. Built for credibility first, lead capture second. English and Spanish, with clean toggle between languages.</p>
+          <ul>
+            <li>Home, About, Services, Insights/Publications, Contact</li>
+            <li>Custom design aligned with ODH's existing logo and identity</li>
+            <li>Bilingual content (EN/ES) — written, not machine-translated</li>
+            <li>Mobile-responsive, fast-loading, secure hosting setup</li>
+            <li>Contact form connected to ODH's preferred inbox</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-item">
+        <div class="scope-num">02</div>
+        <div class="scope-body">
+          <h3>SEO + AI engine optimization</h3>
+          <p>Search infrastructure built in from day one so the site can actually be found — not just on Google, but on the AI tools that increasingly answer the first question a prospect asks. When someone types "best Venezuela political risk consultancy" into ChatGPT, Claude, Perplexity, or Gemini, ODH should be in the answer.</p>
+          <ul>
+            <li>Keyword research targeting Venezuela advisory, political risk, and economic analysis queries (EN + ES)</li>
+            <li>On-page SEO across all 5 pages — titles, meta, schema, internal linking</li>
+            <li>Generative Engine Optimization (GEO): structured content, clear topical authority, FAQ schema, and citation-ready formatting that AI engines pull from</li>
+            <li>Google Search Console + Analytics setup</li>
+            <li>Google Business Profile creation and optimization</li>
+            <li>Technical baseline: sitemap, robots.txt, Core Web Vitals pass, llms.txt for AI crawlers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="scope-item">
+        <div class="scope-num">03</div>
+        <div class="scope-body">
+          <h3>LinkedIn presence — company + leadership</h3>
+          <p>The company page and key leadership profiles rebuilt as a coordinated system. This is where 80% of qualified prospects will look before they ever reach the site.</p>
+          <ul>
+            <li>LinkedIn Company Page — full rebuild with banner, About, specialties, hashtags</li>
+            <li>Up to two founder/partner profile optimizations (headline, About, Featured, Experience)</li>
+            <li>Bilingual copy across all assets, aligned with website voice</li>
+            <li>Custom banner design matching ODH's brand</li>
+            <li>Five post templates ODH can adapt and publish independently</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- TIMELINE -->
+  <section>
+    <div class="eyebrow">Timeline</div>
+    <h2>Four weeks, <em>not more</em></h2>
+
+    <div class="timeline-grid">
+      <div class="timeline-row">
+        <div class="t-week">Week 01</div>
+        <div class="t-content">
+          <h4>Discovery & strategy</h4>
+          <p>One working session with ODH leadership. Positioning, target audiences, content review of existing publications and case material. Sitemap and design direction approved by end of week.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="t-week">Week 02</div>
+        <div class="t-content">
+          <h4>Design & bilingual copy</h4>
+          <p>Site design across all 5 pages. Bilingual copywriting (EN/ES) drafted in parallel. SEO keyword strategy finalized. First design review at end of week.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="t-week">Week 03</div>
+        <div class="t-content">
+          <h4>Build & LinkedIn rollout</h4>
+          <p>Site development. LinkedIn company page and profile assets built and staged. SEO infrastructure (Search Console, schema, GBP) configured. One revision round.</p>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <div class="t-week">Week 04</div>
+        <div class="t-content">
+          <h4>Launch & handover</h4>
+          <p>Site goes live. LinkedIn assets published. Walkthrough session: how to update content, how to publish posts, how to read analytics. Documentation delivered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- INVESTMENT -->
+  <section>
+    <div class="eyebrow">Investment</div>
+    <h2>Friend &amp; <em>mentor</em> rate</h2>
+    <p style="max-width: 640px;">
+      Curiara Group's standard rate for an engagement of this scope is shown below alongside the rate offered to ODH. The discount reflects the personal relationship and is not representative of pricing offered to other clients.
+    </p>
+
+    <div class="invest-box">
+
+      <div class="invest-row">
+        <div class="invest-label">
+          Bilingual website — 5 pages
+          <small>Design, build, copy, hosting setup</small>
+        </div>
+        <div class="invest-amt">
+          <span class="strike">$1,400</span>
+          <span class="friend">$700</span>
+        </div>
+      </div>
+
+      <div class="invest-row">
+        <div class="invest-label">
+          SEO + AI engine optimization
+          <small>Keywords, on-page, GEO, Console, GBP</small>
+        </div>
+        <div class="invest-amt">
+          <span class="strike">$500</span>
+          <span class="friend">$250</span>
+        </div>
+      </div>
+
+      <div class="invest-row">
+        <div class="invest-label">
+          LinkedIn presence
+          <small>Company page + 2 leadership profiles + templates</small>
+        </div>
+        <div class="invest-amt">
+          <span class="strike">$600</span>
+          <span class="friend">$300</span>
+        </div>
+      </div>
+
+      <div class="invest-total">
+        <div class="label">Total — Essential package</div>
+        <div class="total-amt">
+          $1,250
+          <small>USD · all inclusive</small>
+        </div>
+      </div>
+
+      <div class="note-friend">
+        <strong>Standard market rate for this scope:</strong> $2,500 USD. The figure above reflects a ~50% friend-and-mentor discount. Curiara absorbs the difference; ODH does not owe anything beyond the listed total.
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ADD-ONS -->
+  <section>
+    <div class="eyebrow">Optional · post-launch</div>
+    <h2>Keep <em>compounding</em></h2>
+    <p style="max-width: 640px;">
+      The site and LinkedIn page are foundations, not finish lines. These optional retainers keep the work compounding without requiring ODH to build internal capacity. Either can be added at any point after launch.
+    </p>
+
+    <div class="addon-grid">
+
+      <div class="addon">
+        <span class="addon-tag">Add-on · A</span>
+        <h3>Light maintenance</h3>
+        <p>Monthly site updates, security patches, content edits, basic SEO monitoring, and one new page or publication per month. Includes uptime monitoring and quarterly performance report.</p>
+        <div class="addon-price">
+          <span class="strike">$300/mo</span>
+          $150<small>/month</small>
+        </div>
+      </div>
+
+      <div class="addon">
+        <span class="addon-tag">Add-on · B</span>
+        <h3>LinkedIn network growth</h3>
+        <p>Targeted connection strategy for leadership profiles (analysts, journalists, foreign investors, multilateral contacts), two ghostwritten posts per month in ODH's voice, and monthly engagement report.</p>
+        <div class="addon-price">
+          <span class="strike">$500/mo</span>
+          $250<small>/month</small>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; font-style: italic;">
+      Both add-ons can be combined for $375/month (vs. $400 individually) and cancelled with 30 days' notice.
+    </p>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- TERMS -->
+  <section>
+    <div class="eyebrow">Terms</div>
+    <h2>Working <em>arrangement</em></h2>
+
+    <div class="terms">
+      <div class="terms-row">
+        <div class="terms-label">Payment</div>
+        <div class="terms-value">
+          50% on signature · 50% on launch
+          <small>$625 USD upfront / $625 USD on go-live</small>
+        </div>
+      </div>
+      <div class="terms-row">
+        <div class="terms-label">Timeline</div>
+        <div class="terms-value">
+          Four weeks from kickoff
+          <small>Contingent on timely feedback (max 5 business days per review round)</small>
+        </div>
+      </div>
+      <div class="terms-row">
+        <div class="terms-label">Revisions</div>
+        <div class="terms-value">
+          Two rounds included per deliverable
+          <small>Additional revisions billed at $75/hour at the friend rate</small>
+        </div>
+      </div>
+      <div class="terms-row">
+        <div class="terms-label">Ownership</div>
+        <div class="terms-value">
+          ODH owns everything: domain, hosting account, content, code, LinkedIn assets
+          <small>No vendor lock-in. Full credentials handed over at launch.</small>
+        </div>
+      </div>
+      <div class="terms-row">
+        <div class="terms-label">Out of scope</div>
+        <div class="terms-value">
+          E-commerce, paid ad campaigns, third-party integrations, custom backend
+          <small>Available as separate engagements if needed later</small>
+        </div>
+      </div>
+      <div class="terms-row">
+        <div class="terms-label">Confidentiality</div>
+        <div class="terms-value">
+          Mutual NDA standard. Client list and project details kept private.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <div class="eyebrow">Closing</div>
+    <h2>One last <em>thought</em></h2>
+
+    <div class="closing-quote">
+      "The work ODH has done over the years deserves a digital surface that lives up to it. This proposal is built for that — done well, done quickly, done by people who care about getting it right."
+    </div>
+
+    <p style="max-width: 640px;">
+      If anything in this proposal needs adjustment — scope, timeline, sequencing — say the word. The intent is to make this easy and to deliver something ODH is proud to point clients toward. Signature by reply email is sufficient to begin.
+    </p>
+
+    <div class="sign-block">
+      <div>
+        <div class="sign-name">Curiara Group</div>
+        <div class="sign-title">Venezuela Market Advisory · Est. 2026</div>
+      </div>
+      <div style="text-align: right;">
+        <div class="sign-title">Prepared by</div>
+        <div class="sign-name" style="font-size: 1.2rem; margin-top: 0.25rem;">Melissa Yilaly</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>CURIARA GROUP · <span>VENEZUELA MARKET ADVISORY</span></div>
+    <div>CONFIDENTIAL · MAY 2026</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
